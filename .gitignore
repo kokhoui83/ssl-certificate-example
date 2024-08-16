@@ -1,3 +1,7 @@
+# SSL certificates
 *.key
 *.csr
 *.crt
+
+# Python
+.venv
