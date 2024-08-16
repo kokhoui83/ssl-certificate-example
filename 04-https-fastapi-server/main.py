@@ -5,7 +5,6 @@ import uvicorn
 app = FastAPI()
 
 ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
-# ssl_context.load_cert_chain('/app/cert.pem', keyfile='/app/key.pem')
 
 @app.get("/")
 def read_root():
