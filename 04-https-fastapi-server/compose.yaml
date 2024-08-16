@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8003:443"
+    volumes:
+      - ../certificates/private.key:/app/key.pem
+      - ../certificates/server.crt:/app/cert.pem
