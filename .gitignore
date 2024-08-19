@@ -2,6 +2,7 @@
 *.key
 *.csr
 *.crt
+*.pem
 
 # Python
 .venv

@@ -1,0 +1,49 @@
+[ ca ]
+default_ca = CA_default
+
+[ CA_default ]
+dir               = .
+certs             = $dir/certs
+crl_dir           = $dir/crl
+new_certs_dir     = $dir/newcerts
+database          = $dir/index.txt
+serial            = $dir/serial
+crlnumber         = $dir/crlnumber
+crl               = $dir/crl/ca.crl
+RANDFILE          = $dir/private/.rand
+
+private_key       = $dir/private/ca.key
+certificate       = $dir/certs/ca.crt
+
+default_days      = 365
+default_md        = sha256
+default_crl_days  = 30 
+
+policy            = policy_anything
+
+[ policy_anything ]
+countryName            = optional
+stateOrProvinceName    = optional
+organizationName       = optional
+organizationalUnitName = optional
+commonName             = supplied
+emailAddress           = optional
+
+[ req ]
+distinguished_name = req_distinguished_name
+
+[ req_distinguished_name ]
+countryName            = Country Name (2 letter code)
+countryName_default    = MY
+stateOrProvinceName    = State or Province Name (full name)
+stateOrProvinceName_default = Selangor
+localityName           = Locality Name (eg, city)
+localityName_default   = Subang Jaya
+organizationName       = Organization Name (eg, company)
+organizationName_default = Example CA Sdn Bhd
+organizationalUnitName = Organizational Unit Name (eg, section)
+organizationalUnitName_default = IT Department
+commonName             = Common Name (e.g. server FQDN or YOUR name)
+commonName_max         = 64
+emailAddress           = Email Address
+emailAddress_default   = admin@exampleca.com
