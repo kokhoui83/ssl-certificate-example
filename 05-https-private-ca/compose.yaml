@@ -1,0 +1,10 @@
+services:
+  web:
+    image: nginx:1.27.0-alpine
+    ports:
+      - '443:443'
+    volumes:
+      - ./content/index.html:/usr/share/nginx/html/index.html:ro
+      - ../privateCA/certs/server.crt:/etc/nginx/nginx.crt:ro
+      - ../privateCA/private/server.key:/etc/nginx/nginx.key:ro
+      - ./config/nginx.conf:/etc/nginx/conf.d/default.conf:ro
