@@ -1,4 +1,4 @@
-# Simple API Server using FastApi
+# Simple HTTPS API Server using FastApi
 
 ## Prerequisite
 - Python 3.12.x

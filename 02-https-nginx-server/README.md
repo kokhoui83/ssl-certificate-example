@@ -1,4 +1,4 @@
-# Simple HTTP Server via Nginx
+# Simple HTTPS Server via Nginx
 
 ## Ensure SSL certifcates are generated
 - Run the scripts in the [certificates](../certificates/README.md) folder
@@ -8,5 +8,5 @@
 ```
 docker compose up -d
 ```
-- Open browser at `http://localhost:8090`
+- Open browser at `https://localhost`
 

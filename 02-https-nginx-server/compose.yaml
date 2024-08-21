@@ -2,7 +2,7 @@ services:
   web:
     image: nginx:1.27.0-alpine
     ports:
-      - '8093:443'
+      - '443:443'
     volumes:
       - ./content/index.html:/usr/share/nginx/html/index.html:ro
       - ../certificates/server.crt:/etc/nginx/nginx.crt:ro
