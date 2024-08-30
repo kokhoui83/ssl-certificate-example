@@ -58,3 +58,18 @@ step certificate verify example.com.crt --roots root_ca.crt
 # inspect
 step certificate inspect example.com.crt --short
 ```
+
+## Update system to trusted the CA certificate
+- Each OS required the root CA cert to be installed before the server SSL can be used without problem
+```
+# Linux
+sudo apt-get install -y ca-certificates
+sudo cp local-ca.crt /usr/local/share/ca-certificates
+sudo update-ca-certificates
+
+# Windows
+# Double-clicked the root CA cert file (ca.crt) and install as trusted root certificate
+```
+- Browser might need it own setup of the root CA
+    - Most windows browser just use the system CA
+    - Browser on linux might require separate installation of the root CA cert

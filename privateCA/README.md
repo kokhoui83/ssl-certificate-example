@@ -58,6 +58,17 @@ chmod +x 05-signed-csr-with-proivate-ca.sh
 # run script
 ./05-signed-csr-with-proivate-ca.sh
 ```
+## Update system to trusted the CA certificate
+- Each OS required the root CA cert to be installed before the server SSL can be used without problem
+```
+# Linux
+sudo apt-get install -y ca-certificates
+sudo cp local-ca.crt /usr/local/share/ca-certificates
+sudo update-ca-certificates
+
+# Windows
+# Double-clicked the root CA cert file (ca.crt) and install as trusted root certificate
+```
 
 ## CA can revoke server certificate
 - Certificate issued can be revoke if necessary
