@@ -18,4 +18,4 @@ Simple HTTPS Server via Nginx (Private CA with SmallStep CLI)
 ```
 docker compose up -d
 ```
-- Open browser or `curl` at `https://nginx.demo.com`
+- Open browser or `curl` at `https://nginx.example.com`

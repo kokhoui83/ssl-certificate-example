@@ -4,6 +4,7 @@ Sample project to setup server with HTTPS using self-signed certificates
 ## Create Simple Self-Signed Cerfificate
 - [Simple Self-Signed Cerfificate](./certificates/README.md)
 - [Private CA Self-Signed Certificate](./privateCA/README.md)
+- [Private CA Self-Signed Certificate via SmallStep CLI](./smallstep-cli/README.md)
 
 ## Samples
 - [Simple HTTP Nginx Server](./01-http-nginx-server/README.md)

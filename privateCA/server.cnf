@@ -1,0 +1,26 @@
+[ req ]
+default_bits        = 2048
+default_keyfile     = private.key
+distinguished_name  = req_distinguished_name
+req_extensions      = v3_req    # Use v3_req for CSR extensions
+prompt              = no
+
+[ req_distinguished_name ]
+C = MY
+ST = Selangor
+L = Subang Jaya
+O = Demo Sdn Bhd
+OU = IT
+CN = nginx.demo.com
+
+[ v3_req ]
+# v3 extensions for CSR
+subjectAltName = @alt_names    # SAN extension
+basicConstraints = CA:FALSE    # Indicate this is an end-entity certificate, not a CA
+keyUsage = digitalSignature, keyEncipherment  # Key usage for a typical TLS/SSL certificate
+extendedKeyUsage = serverAuth, clientAuth     # Extended key usage for both server and client auth
+
+[ alt_names ]
+DNS.1 = www.nginx.demo.com
+DNS.2 = demo.com
+DNS.3 = sub.demo.com
