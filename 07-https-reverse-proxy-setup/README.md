@@ -18,4 +18,4 @@
 ```
 docker compose up -d
 ```
-- Open browser or `curl` at `https://nginx.example.com`
+- Open browser or `curl` at `https://app.example.com`

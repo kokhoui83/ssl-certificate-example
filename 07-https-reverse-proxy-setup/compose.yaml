@@ -10,5 +10,5 @@ services:
       - ./reverse-proxy/config/nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./reverse-proxy/config/proxy_params:/etc/nginx/proxy_params:ro
   
-  app:
+  alpha:
     build: ./app-server
