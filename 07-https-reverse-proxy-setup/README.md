@@ -1,4 +1,4 @@
-# Setup HTTPS Server with Nginx as Reverse Proxy (Private CA with SmallStep CLI)
+# HTTPS Server with Nginx as Reverse Proxy
 
 ## Ensure SSL certificate are generated
 - Run scripts in the [smallstep-cli](../smallstep-cli/README.md) folder
