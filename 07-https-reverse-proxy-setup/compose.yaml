@@ -6,9 +6,13 @@ services:
     volumes:
       - ../smallstep-cli/example.com.crt:/etc/nginx/nginx.crt:ro
       - ../smallstep-cli/example.com.key:/etc/nginx/nginx.key:ro
+      - ./reverse-proxy/content/index.html:/usr/share/nginx/html/index.html:ro
       - ./reverse-proxy/keys/global.pass:/etc/keys/global.pass:ro
       - ./reverse-proxy/config/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./reverse-proxy/config/common.conf:/etc/nginx/common.conf:ro
       - ./reverse-proxy/config/proxy_params:/etc/nginx/proxy_params:ro
   
   alpha:
-    build: ./app-server
+    build: ./alpha-server
+  beta:
+    build: ./beta-server
