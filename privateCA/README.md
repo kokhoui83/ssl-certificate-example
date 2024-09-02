@@ -69,6 +69,9 @@ sudo update-ca-certificates
 # Windows
 # Double-clicked the root CA cert file (ca.crt) and install as trusted root certificate
 ```
+- Browser might need it own setup of the root CA
+    - Most windows browser just use the system CA
+    - Browser on linux might require separate installation of the root CA cert
 
 ## CA can revoke server certificate
 - Certificate issued can be revoke if necessary
